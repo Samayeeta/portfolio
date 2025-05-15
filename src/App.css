@@ -1,44 +1,278 @@
+/*──────────────────── 1. COLOURS ────────────────────*/
+:root {
+  /* Dark mode */
+  --bg-page:       #0a192f;
+  --bg-section:    #112240;
+  --bg-card:       #233554;
+  --line-col:      #233554;
+  --text-primary:  #e6f1ff;
+  --text-secondary:#a8b2d1;
+  --accent:        #64ffda;  /* list bullets only */
+  --radius:        8px;
+}
+
+/* Light mode overrides */
+body.light {
+  --bg-page:        #ffffff;
+  --bg-section:     #f5f7fa;
+  --bg-card:        #eef1f5;
+  --line-col:       #cdd4df;
+  --text-primary:   #0a192f;
+  --text-secondary: #475466;
+  --accent:         #0070f3;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+/*──────────────────── 2. GLOBAL ────────────────────*/
+* {
+  margin:0; padding:0; box-sizing:border-box;
+}
 body {
-  background-color: #0a192f;
-  color: #ccd6f6;
-  font-family: 'Fira Code', monospace;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  transition: background .3s, color .3s;
+}
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+
+/*──────────────────── 3. NAVBAR ────────────────────*/
+.navbar {
+  position:fixed;
+  top:1rem; left:50%;
+  transform: translateX(-50%);
+  display:flex; gap:1.5rem;
+  background: var(--bg-section);
+  padding:.5rem 2rem;
+  border-radius:999px;
+  z-index:200;
+}
+.navbar a {
+  font-family:'Chivo',sans-serif;
+  color:var(--text-primary);
+  font-weight:500;
+}
+.navbar a:hover {
+  color:var(--accent);
+}
+.toggle-btn {
+  background:none;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  padding:.2rem .6rem; border-radius:4px;
+  cursor:pointer;
+}
+.toggle-btn:hover {
+  background:var(--accent);
+  color:var(--bg-page);
 }
 
-.App {
-  text-align: center;
+/*──────────────────── 4. HERO ────────────────────*/
+.hero {
+  min-height:100vh;
+  background:var(--bg-page);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center; padding:0 1rem;
+}
+.hero h1 {
+  font-family:'Chivo',sans-serif;
+  font-size:3rem; line-height:1.2;
+  color:var(--text-primary);
+  margin-bottom:1rem;
+}
+.hero p {
+  max-width:640px;
+  color:var(--text-secondary);
+  font-size:1.1rem; line-height:1.5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*──────────────────── 5. ABOUT ────────────────────*/
+.about {
+  background:var(--bg-section);
+  padding:4rem 2rem; text-align:center;
+}
+.about h2 {
+  font-family:'Chivo',sans-serif;
+  font-size:2.5rem;
+  color:var(--text-primary);
+  margin-bottom:1rem;
+}
+.about p {
+  max-width:700px; margin:1rem auto;
+  color:var(--text-secondary); line-height:1.6;
+}
+.social-links {
+  display:flex; gap:1rem; justify-content:center; margin-top:1.5rem;
+}
+.social-links a {
+  width:40px; height:40px;
+  border:1px solid var(--text-primary);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text-primary);
+  transition:background .3s,color .3s;
+}
+.social-links a:hover {
+  background:var(--accent);
+  color:var(--bg-page);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*──────────────────── 6. SKILLS ────────────────────*/
+.skills {
+  background:var(--bg-page);
+  padding:4rem 2rem; text-align:center;
+}
+.skills h2 {
+  font-family:'Chivo',sans-serif;
+  font-size:2.5rem;
+  color:var(--text-primary);
+  margin-bottom:1rem;
+}
+.skill-list {
+  display:flex; flex-wrap:wrap;
+  gap:.75rem; justify-content:center;
+}
+.skill-pill {
+  background:var(--text-primary);
+  color:var(--bg-page);
+  padding:.6rem 1rem;
+  border-radius:999px;
+  font-family:'Chivo',sans-serif;
+  font-size:.9rem;
+}
+body.light .skill-pill {
+  background:var(--bg-page);
+  color:var(--text-primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*──────────────────── 7. PROJECTS ────────────────────*/
+.projects {
+  background:var(--bg-section);
+  padding:4rem 2rem; text-align:center;
+}
+.projects h2 {
+  font-family:'Chivo',sans-serif;
+  font-size:2.5rem; color:var(--text-primary);
+  margin-bottom:1rem;
+}
+.project-list {
+  display:flex; flex-direction:column;
+  gap:2rem; max-width:800px; margin:0 auto;
+}
+.project-card {
+  background:var(--bg-card);
+  padding:2rem; border-radius:var(--radius);
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+.project-card h3 {
+  font-family:'Chivo',sans-serif;
+  font-size:1.5rem; color:var(--text-primary);
+  margin-bottom:.5rem;
+}
+.project-card p {
+  color:var(--text-secondary); line-height:1.6;
+}
+.tech-stack {
+  margin-top:1rem;
+  display:flex;flex-wrap:wrap;gap:.5rem;
+}
+.tech-stack .pill {
+  background:var(--bg-page);
+  color:var(--text-primary);
+  padding:.4rem .8rem;
+  border-radius:999px;
+  font-family:'Chivo',sans-serif;
+  font-size:.75rem;
 }
 
-.App-link {
-  color: #61dafb;
+/*──────────────────── 8. EXPERIENCE ────────────────────*/
+.experience{
+  background:var(--bg-page);
+  padding:4rem 2rem;
+}
+.experience h2{
+  font-family:'Chivo',sans-serif;
+  font-size:2.5rem;text-align:center;
+  color:var(--text-primary);margin-bottom:3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ── core layout: stacked rows with centre line ───────── */
+.timeline-rows{
+  max-width:900px;margin:0 auto;
+  display:flex;flex-direction:column;gap:3rem;
+  position:relative;
+}
+.timeline-rows::before{              /* vertical line */
+  content:'';position:absolute;top:0;bottom:0;left:50%;
+  width:2px;background:var(--line-col);transform:translateX(-50%);
+}
+
+/* one row = left cell • centre • right cell */
+.timeline-row{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;
+}
+
+/* placeholder keeps grid intact when card on opposite side */
+.placeholder{height:0;}
+
+/* white circle */
+.dot{
+  grid-column:2;justify-self:center;
+  width:16px;height:16px;border:3px solid var(--text-primary);
+  border-radius:50%;background:var(--bg-page);margin-top:.3rem;
+}
+
+/* cards */
+.card{
+  background:var(--bg-card);color:var(--text-primary);
+  padding:1.5rem;border-radius:var(--radius);
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+.timeline-row:nth-child(odd)  .card{text-align:right;justify-self:end;}
+.timeline-row:nth-child(even) .card{text-align:left; justify-self:start;}
+
+.card h3{font-family:'Chivo',sans-serif;font-size:1.3rem;margin-bottom:.5rem;}
+.card .company{font-style:italic;color:var(--text-secondary);margin-bottom:.6rem;}
+.card .exp-date{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem;}
+
+/* plain list (no custom bullets) */
+.card ul{display:flex;flex-direction:column;gap:.55rem;}
+.card ul li{line-height:1.45;color:var(--text-primary);}
+.card ul li::before{display:none;}
+
+/*──────────────────── 9. CONTACT ────────────────────*/
+.contact {
+  background:var(--bg-section);
+  padding:4rem 2rem; text-align:center;
+}
+.contact h2 {
+  font-family:'Chivo',sans-serif;
+  font-size:2.5rem; color:var(--text-primary);
+  margin-bottom:1rem;
+}
+.contact p {
+  color:var(--text-secondary);
+  max-width:600px; margin:0 auto 1rem;
+  line-height:1.6;
+}
+.contact .button {
+  background:var(--accent);
+  color:var(--bg-page);
+  padding:.8rem 1.6rem;
+  border-radius:999px;
+  font-family:'Chivo',sans-serif;
+  font-weight:500;
+}
+.contact .button:hover {
+  background:rgba(100,255,218,0.8);
+}
+
+/*──────────────────── 10. FOOTER ────────────────────*/
+.footer {
+  background:var(--bg-card);
+  padding:2rem; text-align:center;
+}
+.footer p {
+  color:var(--text-secondary);
 }
