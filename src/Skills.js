@@ -8,8 +8,13 @@ export default function Skills() {
     <section className="skills" id="skills">
       <h2 data-aos="fade-up">My Skills</h2>
       <div className="skill-list">
-        {SKILLS.map((s,i) => (
-          <span className="skill-pill" key={i} data-aos="fade-up">
+        {SKILLS.map((s, i) => (
+          <span
+            className="skill-pill"
+            key={i}
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
+          >
             {s}
           </span>
         ))}

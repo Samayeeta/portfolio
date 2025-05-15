@@ -7,17 +7,19 @@ const EXPERIENCE = [
     company: 'Hirebuddy',
     date: 'Jan 2025 – Present',
     details: [
-      'Built AI-powered resume optimization platform with Flask, spaCy, and React.js.',
-      'Scaled MongoDB backend for 10K+ monthly requests.',
+      'Spearheading development of an AI-powered resume optimization tool aligned with ATS standards.',
+      'Integrated advanced NLP via spaCy to enhance resume parsing and keyword matching.',
+      'Built responsive frontend with React.js and Flask backend with real-time MongoDB integration.',
+      'Implemented real-time preview and optimization insights to boost user engagement.'
     ],
   },
   {
-    title: 'Hack4Bengal Core Team Member',
+    title: 'Hackathon Organizer & Core Team Member',
     company: 'Hack4Bengal',
     date: 'Feb 2025 – Present',
     details: [
-      'Led logistics for 5K+ participant hackathon, overseeing workshops and mentor tracks.',
-      'Coordinated sponsor outreach and branding efforts.',
+      'Directed logistics for a 5K+ participant hackathon including mentors, workshops, and judging tracks.',
+      'Led sponsor outreach, partnership coordination, and branding execution across digital platforms.'
     ],
   },
   {
@@ -25,10 +27,22 @@ const EXPERIENCE = [
     company: 'CodeDay Kolkata',
     date: 'Jun 2023 – Present',
     details: [
-      'Managed technical setup for 250+ student hackathons.',
-      'Developed live-troubleshooting infrastructure and team registration flows.',
+      'Managed technical operations for 12- and 24-hour hackathons with 250+ participants.',
+      'Created troubleshooting systems and smooth team registration experiences for seamless event flow.',
+      'Facilitated live technical support, team building, and participant onboarding resources.'
     ],
   },
+  {
+  title: 'Co-Founder & Vice President',
+  company: 'Hoomans of Calcutta',
+  date: 'Jan 2022 – Present',
+  details: [
+    'Co-founded a youth-led nonprofit driving educational and menstrual health initiatives in Kolkata.',
+    'Led campaigns that raised thousands of rupees in donations and distributed 8000+ books city-wide.',
+    'Coordinated the donation of 15,000+ sanitary products in collaboration with The Period Society.',
+    'Built partnerships with student orgs, driving outreach and logistics across multiple districts.'
+  ],
+}
 ];
 
 export default function Experience() {

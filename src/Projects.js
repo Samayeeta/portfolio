@@ -2,26 +2,32 @@ const PROJECTS = [
   {
     name: 'TechBlogs',
     description:
-      'Designed a full-stack blogging platform with semantic search and structured CMS, enabling authors to publish and track engagement seamlessly.',
-    stack: ['Flask','Firebase','React','Vite'],
+      'Developed a semantic blogging platform with a structured CMS, real-time Firebase backend, and SEO optimization. Enabled social sharing and topic-based discovery with intelligent search.',
+    stack: ['Flask', 'Firebase', 'React', 'Vite'],
   },
   {
     name: 'IntelliMenu',
     description:
-      'Built an automated café ordering and dashboard system, reducing kitchen delays by 40% and synchronizing live order queues.',
-    stack: ['Flask','React','Vite'],
+      'Engineered a smart café management system that automated orders, synced live queue dashboards, and improved order accuracy by 40%. Managers accessed sales insights via real-time analytics.',
+    stack: ['Flask', 'React', 'Vite'],
   },
   {
-    name: 'Accident Analysis App',
+    name: 'Edufy (CalHacks Winner)',
     description:
-      'Engineered a map-based dashboard for traffic incident data, using spatial clustering to pinpoint high-risk zones for civic planning.',
-    stack: ['Flask','Python','GeoJSON'],
+      'Built an accessible learning platform with AI-driven personalization and WCAG 2.0 compliance. Won "Best Education Project" at CalHacks for improving engagement by 40%.',
+    stack: ['Flask', 'React', 'Firebase'],
   },
   {
     name: 'NeuraGlance AI',
     description:
-      'Developed a research tool combining multi-layer web scraping with Gemini-powered sentiment analysis and summarization.',
-    stack: ['Next.js','Puppeteer','Node.js'],
+      'Created a research companion tool combining Gemini API with Puppeteer for live web scraping, real-time sentiment tagging, and summarization of trending topics.',
+    stack: ['Next.js', 'Puppeteer', 'Node.js'],
+  },
+  {
+    name: 'Accident Analysis App',
+    description:
+      'Built a GIS-enabled dashboard that visualizes traffic accident patterns using spatial clustering and GeoJSON, aiding civic authorities in planning safer roads.',
+    stack: ['Flask', 'Python', 'GeoJSON'],
   },
 ];
 

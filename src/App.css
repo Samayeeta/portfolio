@@ -37,6 +37,17 @@ body {
 a { text-decoration:none; color:inherit; }
 ul { list-style:none; }
 
+h1, h2, h3, .navbar a {
+  font-family: 'Clash Display', sans-serif;
+}
+
+.typewriter {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /*──────────────────── 3. NAVBAR ────────────────────*/
 .navbar {
   position:fixed;
@@ -240,6 +251,7 @@ body.light .skill-pill {
 .card ul{display:flex;flex-direction:column;gap:.55rem;}
 .card ul li{line-height:1.45;color:var(--text-primary);}
 .card ul li::before{display:none;}
+
 
 /*──────────────────── 9. CONTACT ────────────────────*/
 .contact {
